@@ -1,0 +1,58 @@
+---
+title: "Instagram"
+description: ""
+icon: "https://cdn.simpleicons.org/instagram"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/instagram/user` | `username` |
+| GET | `/instagram/search` | `query`, `count` (default 10) |
+| GET | `/instagram/followers` | `username`, `max_id` (optional) |
+| GET | `/instagram/following` | `username`, `max_id` (optional) |
+| GET | `/instagram/posts` | `username`, `max_id` (optional), `count` (default 12) |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/instagram/user?username=leomessi"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://api.scrape.rocks/instagram/user?username=leomessi", headers=headers)
+  print(r.json())
+  ```
+  ```javascript JavaScript
+  fetch("https://api.scrape.rocks/instagram/user?username=leomessi", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.json())
+    .then(console.log)
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://api.scrape.rocks/instagram/user?username=leomessi", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const data = await response.json();
+  console.log(data);
+  ```
+</CodeGroup>
+
+```json Response
+{
+  "id": "4275538903",
+  "username": "leomessi",
+  "full_name": "Leo Messi",
+  "biography": "FOOTBALL PLAYER",
+  "external_url": "https://...",
+  "profile_pic_url": "https://...",
+  "followers": 480000000,
+  "following": 250,
+  "posts": 950,
+  "is_private": false,
+  "is_verified": true,
+  "is_business": true,
+  "category_name": "Athlete"
+}
+```

@@ -1,0 +1,56 @@
+---
+title: "TikTok"
+description: ""
+icon: "https://cdn.simpleicons.org/tiktok"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/tiktok/user` | `username` |
+| GET | `/tiktok/search` | `query`, `count` (default 10) |
+| GET | `/tiktok/video` | `url` |
+| GET | `/tiktok/fyp` | (none — random video) |
+| GET | `/tiktok/proxy` | `url` (proxies video/download/cover) |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/tiktok/user?username=davie504"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://api.scrape.rocks/tiktok/user?username=davie504", headers=headers)
+  print(r.json())
+  ```
+  ```javascript JavaScript
+  fetch("https://api.scrape.rocks/tiktok/user?username=davie504", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.json())
+    .then(console.log)
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://api.scrape.rocks/tiktok/user?username=davie504", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const data = await response.json();
+  console.log(data);
+  ```
+</CodeGroup>
+
+```json Response
+{
+  "id": "6772719287198393349",
+  "username": "davie504",
+  "nickname": "Davie504",
+  "biography": "BASS PLAYER",
+  "avatar_url": "https://...",
+  "is_verified": true,
+  "is_private": false,
+  "followers": 13400000,
+  "following": 120,
+  "likes": 98000000,
+  "videos": 850
+}
+```

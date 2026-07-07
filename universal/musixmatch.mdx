@@ -1,0 +1,53 @@
+---
+title: "Musixmatch"
+description: ""
+icon: "music"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/musixmatch/lyrics` | `q` (smart-parsed) or `title` + `artist` |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/musixmatch/lyrics?title=Bohemian%20Rhapsody&artist=Queen"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://api.scrape.rocks/musixmatch/lyrics?title=Bohemian%20Rhapsody&artist=Queen", headers=headers)
+  print(r.json())
+  ```
+  ```javascript JavaScript
+  fetch("https://api.scrape.rocks/musixmatch/lyrics?title=Bohemian%20Rhapsody&artist=Queen", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.json())
+    .then(console.log)
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://api.scrape.rocks/musixmatch/lyrics?title=Bohemian%20Rhapsody&artist=Queen", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const data = await response.json();
+  console.log(data);
+  ```
+</CodeGroup>
+
+```json Response
+{
+  "text": "Is this the real life?\nIs this just fantasy?\nCaught in a landslide...",
+  "lines": [
+    { "range": { "start": 0 }, "line": "Is this the real life?" },
+    { "range": { "start": 2500 }, "line": "Is this just fantasy?" }
+  ],
+  "track": {
+    "title": "Bohemian Rhapsody",
+    "author": "Queen",
+    "album": "A Night at the Opera",
+    "album_art": "https://..."
+  },
+  "source": "Musixmatch"
+}
+```

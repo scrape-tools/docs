@@ -1,0 +1,52 @@
+---
+title: "Twitter"
+description: ""
+icon: "https://cdn.simpleicons.org/x"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/twitter/user` | `username` |
+| GET | `/twitter/tweets` | `username`, `count` (default 20), `cursor` (optional) |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/twitter/user?username=elonmusk"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://api.scrape.rocks/twitter/user?username=elonmusk", headers=headers)
+  print(r.json())
+  ```
+  ```javascript JavaScript
+  fetch("https://api.scrape.rocks/twitter/user?username=elonmusk", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.json())
+    .then(console.log)
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://api.scrape.rocks/twitter/user?username=elonmusk", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const data = await response.json();
+  console.log(data);
+  ```
+</CodeGroup>
+
+```json Response
+{
+  "id": "44196397",
+  "name": "Elon Musk",
+  "username": "elonmusk",
+  "description": "Mars & Cars",
+  "location": "Texas",
+  "verified": true,
+  "followers_count": 185000000,
+  "friends_count": 650,
+  "statuses_count": 45000,
+  "profile_image_url_https": "https://..."
+}
+```

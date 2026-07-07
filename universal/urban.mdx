@@ -1,0 +1,57 @@
+---
+title: "Urban Dictionary"
+description: ""
+icon: "book-open"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/urban/define` | `term` |
+| GET | `/urban/random` | `count` (default 10) |
+| GET | `/urban/autocomplete` | `q` |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/urban/define?term=yeet"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://api.scrape.rocks/urban/define?term=yeet", headers=headers)
+  print(r.json())
+  ```
+  ```javascript JavaScript
+  fetch("https://api.scrape.rocks/urban/define?term=yeet", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.json())
+    .then(console.log)
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://api.scrape.rocks/urban/define?term=yeet", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const data = await response.json();
+  console.log(data);
+  ```
+</CodeGroup>
+
+```json Response
+{
+  "term": "yeet",
+  "count": 5,
+  "definitions": [
+    {
+      "defid": 12345,
+      "word": "yeet",
+      "definition": "To throw something with force",
+      "example": "I yeeted my phone across the room",
+      "thumbs_up": 8500,
+      "thumbs_down": 1200,
+      "author": "someuser",
+      "written_on": "2018-06-15T00:00:00.000Z"
+    }
+  ]
+}
+```

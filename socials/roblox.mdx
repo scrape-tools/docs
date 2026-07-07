@@ -1,0 +1,162 @@
+---
+title: "Roblox"
+description: ""
+icon: "https://cdn.simpleicons.org/roblox"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/roblox/user` | `username` |
+| GET | `/roblox/search` | `query`, `limit` (default 10) |
+| GET | `/roblox/avatar` | `username` |
+| GET | `/roblox/badges` | `username`, `limit` (default 100) |
+| GET | `/roblox/groups` | `username` |
+| GET | `/roblox/games` | `username`, `limit` (default 20) |
+| GET | `/roblox/collectibles` | `username`, `limit` (default 100) |
+| GET | `/roblox/friends` | `username`, `limit` (default 100) |
+| GET | `/roblox/followers` | `username`, `limit` (default 100) |
+| GET | `/roblox/following` | `username`, `limit` (default 100) |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/roblox/user?username=BuildIntoGames"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://api.scrape.rocks/roblox/user?username=BuildIntoGames", headers=headers)
+  print(r.json())
+  ```
+  ```javascript JavaScript
+  fetch("https://api.scrape.rocks/roblox/user?username=BuildIntoGames", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.json())
+    .then(console.log)
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://api.scrape.rocks/roblox/user?username=BuildIntoGames", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const data = await response.json();
+  console.log(data);
+  ```
+</CodeGroup>
+
+
+<CodeGroup>
+  ```json User
+  {
+    "id": 6888871,
+    "username": "BuildIntoGames",
+    "display_name": "BuildIntoGames",
+    "description": "Professional games build into...",
+    "created": "2008-09-28T21:37:54.483-05:00",
+    "is_banned": false,
+    "has_verified_badge": true,
+    "social_links": [
+      { "type": "Twitter", "url": "https://twitter.com/...", "title": "Twitter" }
+    ],
+    "friends": 120,
+    "followers": 45000,
+    "following": 85,
+    "headshot_url": "https://...",
+    "avatar_url": "https://...",
+    "bust_url": "https://...",
+    "presence": { "user_presence_type": 2, "last_location": "Studio" }
+  }
+  ```
+  ```json Search
+  [
+    {
+      "id": 6888871,
+      "username": "BuildIntoGames",
+      "display_name": "BuildIntoGames",
+      "has_verified_badge": true,
+      "created": "2008-09-28T21:37:54.483-05:00"
+    }
+  ]
+  ```
+  ```json Avatar
+  {
+    "avatar_type": "R6",
+    "scales": { "height": 1, "width": 1, "head": 1 },
+    "body_colors": { "head": 1, "torso": 23, "left_arm": 23, "right_arm": 23, "left_leg": 102, "right_leg": 102 },
+    "assets": [
+      {
+        "id": 12345,
+        "name": "Cool Hat",
+        "asset_type": "Accessory",
+        "thumbnail_url": "https://..."
+      }
+    ]
+  }
+  ```
+  ```json Badges
+  [
+    {
+      "id": 99999,
+      "name": "Welcome Badge",
+      "description": "Welcome to Roblox!",
+      "image_url": "https://...",
+      "awarded": "2020-01-01T00:00:00Z"
+    }
+  ]
+  ```
+  ```json Groups
+  {
+    "primary": {
+      "id": 11111,
+      "name": "BuildIntoGames Group",
+      "description": "Official group",
+      "member_count": 5000,
+      "role": "Owner",
+      "role_rank": 255
+    },
+    "joined": [
+      { "id": 22222, "name": "Cool Group", "description": "A cool group", "member_count": 100, "role": "Member", "role_rank": 1 }
+    ]
+  }
+  ```
+  ```json Games
+  [
+    {
+      "id": 33333,
+      "name": "My Game",
+      "description": "A fun game",
+      "player_count": 50,
+      "visits": 100000,
+      "created": "2021-01-01T00:00:00Z",
+      "updated": "2024-01-01T00:00:00Z",
+      "genre": "Adventure"
+    }
+  ]
+  ```
+  ```json Collectibles
+  [
+    {
+      "name": "Limited Hat",
+      "asset_id": 44444,
+      "collectible_item_id": "uuid-here",
+      "collectible_product_id": "uuid-here",
+      "recent_average_price": 500,
+      "original_price": 100,
+      "sale_location": "Avatar Shop",
+      "thumbnail_url": "https://..."
+    }
+  ]
+  ```
+  ```json Friends
+  [
+    {
+      "id": 55555,
+      "username": "FriendUser",
+      "display_name": "FriendUser",
+      "description": "A friend",
+      "is_online": true,
+      "headshot_url": "https://..."
+    }
+  ]
+  ```
+</CodeGroup>

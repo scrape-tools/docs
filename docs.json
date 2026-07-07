@@ -1,54 +1,58 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "scrape.rocks",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/icon.jpg",
   "navigation": {
     "pages": [
       {
         "group": "Getting Started",
         "pages": [
-          "index",
-          "quickstart"
+          "index"
+        ]
+      },
+      {
+        "group": "Social",
+        "pages": [
+          "socials/roblox",
+          "socials/tiktok",
+          "socials/instagram",
+          "socials/twitter",
+          "socials/snapchat"
+        ]
+      },
+      {
+        "group": "Developer",
+        "pages": [
+          "developer/github"
+        ]
+      },
+      {
+        "group": "Universal",
+        "pages": [
+          "universal/urban",
+          "universal/musixmatch",
+          "universal/translate"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/icon.jpg",
+    "dark": "/icon.jpg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Discord",
+        "href": "https://discord.com/users/@mwpk"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
+    ]
   },
   "contextual": {
     "options": [
@@ -64,9 +68,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "discord": "https://discord.com/users/@mwpk"
     }
   }
 }
