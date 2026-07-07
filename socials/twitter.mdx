@@ -36,17 +36,66 @@ icon: "https://cdn.simpleicons.org/x"
   ```
 </CodeGroup>
 
-```json Response
-{
-  "id": "44196397",
-  "name": "Elon Musk",
-  "username": "elonmusk",
-  "description": "Mars & Cars",
-  "location": "Texas",
-  "verified": true,
-  "followers_count": 185000000,
-  "friends_count": 650,
-  "statuses_count": 45000,
-  "profile_image_url_https": "https://..."
-}
-```
+<CodeGroup>
+  ```json User
+  {
+    "id": "44196397",
+    "name": "Elon Musk",
+    "username": "elonmusk",
+    "created_at": "Tue Jun 02 20:12:29 +0000 2009",
+    "description": "Starmind",
+    "location": null,
+    "url": null,
+    "protected": false,
+    "verified": true,
+    "followers_count": 240739441,
+    "friends_count": 1366,
+    "listed_count": 169909,
+    "favourites_count": 238148,
+    "statuses_count": 105308,
+    "media_count": 4592,
+    "banner_url": null,
+    "avatar_url": "https://pbs.twimg.com/profile_images/2053244804520427520/m8mdWZCG_normal.jpg",
+    "can_dm": false
+  }
+  ```
+
+  ``` json Tweets
+  {
+    "tweets": [
+      {
+        "id": "2074534474449113309",
+        "id_str": "2074534474449113309",
+        "full_text": "RT @WallStreetApes: Americans have had enough of the bottom 2% of society ruining our lives\n\n“I'm gonna be so blunt. Because of the ghetto-…",
+        "created_at": "Tue Jul 07 16:42:16 +0000 2026",
+        "retweet_count": 1681,
+        "favorite_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "lang": "en",
+        "is_quote_status": false,
+        "possibly_sensitive": false,
+        "entities": {
+          "user_mentions": [
+            {
+              "id_str": "1099579684981944320",
+              "indices": [3, 18],
+              "name": "Wall Street Apes",
+              "screen_name": "WallStreetApes"
+            }
+          ]
+        },
+        "ext_entities": null,
+        "author": {
+          "id": "44196397",
+          "name": null,
+          "username": null,
+          "avatar": null
+        }
+      }
+    ],
+    "next_cursor": "DAAHCgABHMpOyBU__-oLAAIAAAATMjA3NDMzOTMxOTc3OTU2OTkwOAgAAwAAAAIAAA"
+  }
+  ```
+  
+</CodeGroup>

@@ -9,7 +9,6 @@ icon: "https://cdn.simpleicons.org/tiktok"
 | GET | `/tiktok/user` | `username` |
 | GET | `/tiktok/search` | `query`, `count` (default 10) |
 | GET | `/tiktok/video` | `url` |
-| GET | `/tiktok/fyp` | (none — random video) |
 | GET | `/tiktok/proxy` | `url` (proxies video/download/cover) |
 
 <CodeGroup>
@@ -39,7 +38,8 @@ icon: "https://cdn.simpleicons.org/tiktok"
   ```
 </CodeGroup>
 
-```json Response
+<CodeGroup>
+```json User
 {
   "id": "6772719287198393349",
   "username": "davie504",
@@ -54,3 +54,94 @@ icon: "https://cdn.simpleicons.org/tiktok"
   "videos": 850
 }
 ```
+```json Fyp
+{
+  "id": "7657892106974809364",
+  "desc": "Неприятный разговор в огороде ",
+  "create_time": 1782991953,
+  "author": {
+    "id": "6519407624729924623",
+    "unique_id": "stasprostoklass",
+    "nickname": "Тгк: stasprostoklass",
+    "avatar_url": "https://p16-common-sign.tiktokcdn-eu.com/tos-maliva-avt-0068/7325725112186568710~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=c490d3be&x-expires=1783623600&x-signature=ZBDfPWNh4rTRwB8awpcbpo1UUx8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a"
+  },
+  "stats": {
+    "play_count": 7300000,
+    "like_count": 964600,
+    "comment_count": 6924,
+    "share_count": 554000,
+    "collect_count": 96000
+  },
+  "music": {
+    "id": "7657892136607664917",
+    "title": "оригинальный звук",
+    "author_name": "Тгк: stasprostoklass",
+    "cover_url": "https://p16-common-sign.tiktokcdn-eu.com/tos-maliva-avt-0068/7325725112186568710~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=c490d3be&x-expires=1783623600&x-signature=ZBDfPWNh4rTRwB8awpcbpo1UUx8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "play_url": "https://v58.tiktokcdn-eu.com/video/tos/alisg/tos-alisg-v-27dcd7/oYmxIQRfUDCD1cLo4kFtBJqFVUdgUBERM6f7LE/?a=1233&bti=ODszNWYuMDE6&&bt=125&ft=.NpOcInz7ThaYkSGXq8Zmo&mime_type=audio_mpeg&rc=Zjw7aDpoaDNlOzk2ZGdlOEBpam48cXA5cm83PDMzODU8NEAvNGIuNV9jNmIxY2E0LzVeYSM1bjRzMmQ0bDBhLS1kMS1zcw%3D%3D&vvpl=1&l=202607071922241C14AC76F7BF057ECF52&VExpiration=1783538565&VSignature=_EtfGScr1sQ44My-qn5icw&btag=e00078000",
+    "duration": 21
+  },
+  "video": {
+    "width": 576,
+    "height": 1024,
+    "duration": 21,
+    "cover_url": "/tiktok/proxy?url=https%3A//p16-common-sign.tiktokcdn-eu.com/tos-alisg-p-0037/oMUQJMeUgWgI4ejCYZfM8Dwj8DAWXnIA4dHUgT~tplv-tiktokx-origin.image%3Fdr%3D10395%26x-expires%3D1783623600%26x-signature%3D0aieMndHONjIitZS%252Fvpdly%252Fj5k4%253D%26t%3D4d5b0474%26ps%3D13740610%26shp%3D81f88b70%26shcp%3D43f4a2f9%26idc%3Dno1a",
+    "play_url": "/tiktok/proxy?url=https%3A//v16-webapp-prime.tiktok.com/video/tos/alisg/tos-alisg-pve-0037c001/oclIuIAEBZuPyATmwifFAkQOPiCyG1ACR0MIvG/%3Fa%3D1988%26bti%3DODszNWYuMDE6%26%26bt%3D2406%26ft%3D-Csk_mmLPD12N8_qFn-Ux2M5hY3W3wv25McAp%26mime_type%3Dvideo_mp4%26rc%3DaWY1Z2Q8NTk1ODloODk3OUBpMzk3Zm45cjM3PDMzODczNEBhLWMvNWNfXjMxY2M1YTBhYSMzc2cuMmRjYzBhLS1kMWBzcw%253D%253D%26expire%3D1783624965%26l%3D202607071922241C14AC76F7BF057ECF52%26ply_type%3D2%26policy%3D2%26signature%3D9dcb6c9a30374959469c24b2f68bea25%26tk%3Dtt_chain_token%26btag%3De000b0000",
+    "download_url": "/tiktok/proxy?url=https%3A//v16-webapp-prime.tiktok.com/video/tos/alisg/tos-alisg-pve-0037c001/oUcBiAZCyC0pmFPGIQGXifMAuzIG1EAyjAPIwF/%3Fa%3D1988%26bti%3DODszNWYuMDE6%26%26bt%3D2159%26ft%3D-Csk_mmLPD12N8_qFn-Ux2M5hY3W3wv25McAp%26mime_type%3Dvideo_mp4%26rc%3DOGllN2c7NGU1Zmc2NTQ0OUBpMzk3Zm45cjM3PDMzODczNEBjLjUuL2AyNTUxYWEyMC1jYSMzc2cuMmRjYzBhLS1kMWBzcw%253D%253D%26expire%3D1783624965%26l%3D202607071922241C14AC76F7BF057ECF52%26ply_type%3D2%26policy%3D2%26signature%3D6386ecc16d9d3422d114d032318daff8%26tk%3Dtt_chain_token%26btag%3De000b0000"
+  },
+  "image_posts": null,
+  "hashtags": [],
+  "is_ad": false
+}
+```
+```json Video
+{
+  "id": "7651022849334873374",
+  "desc": "best top 1 oat argue with a wall #geometrydash #top1 #edit #slaughterhouse #fyp ",
+  "create_time": 1781392592,
+  "author": {
+    "id": "7432722682536379435",
+    "unique_id": "its.lucas.ontt",
+    "nickname": "lucas!",
+    "avatar_url": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast8-avt-0068-tx2/395f0845c014e965ea6cf45b1d2c9a3f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=ff6adfee&x-expires=1783623600&x-signature=kCDhMaTjBC4yV9qu48GOg2Tei50%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a"
+  },
+  "stats": {
+    "play_count": 8759,
+    "like_count": 1165,
+    "comment_count": 56,
+    "share_count": 240,
+    "collect_count": 288
+  },
+  "music": {
+    "id": "7651022841512561438",
+    "title": "original sound",
+    "author_name": "lucas!",
+    "cover_url": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast8-avt-0068-tx2/395f0845c014e965ea6cf45b1d2c9a3f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=ff6adfee&x-expires=1783623600&x-signature=kCDhMaTjBC4yV9qu48GOg2Tei50%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "play_url": "https://v77.tiktokcdn-eu.com/23f787a4ad6cf36d7fec76e3f8ab109d/6a4ea72d/video/tos/maliva/tos-maliva-v-27dcd7c799-us/owgUWADIEICEAArIfoEAEKAFeetSDN4TNc7Tq5/?a=1233&bti=ODszNWYuMDE6&&bt=125&ft=.NpOcInz7ThxSkSGXq8Zmo&mime_type=audio_mpeg&rc=anJydm85cm54OzMzaTU8NEBpanJydm85cm54OzMzaTU8NEAzZTByMmRrNmphLS1kMTJzYSMzZTByMmRrNmphLS1kMTJzcw%3D%3D&vvpl=1&l=20260707193802A06B3BF9BF11A4829DA9&btag=e00078000",
+    "duration": 19
+  },
+  "video": {
+    "width": 720,
+    "height": 720,
+    "duration": 19,
+    "cover_url": "/tiktok/proxy?url=https%3A//p16-common-sign.tiktokcdn-eu.com/tos-useast8-p-0068-tx2/oERA6COOIZtVg8NPtiiABRI0zE3kiBaR5wDmB~tplv-tiktokx-origin.image%3Fdr%3D10395%26x-expires%3D1783623600%26x-signature%3Dy5l4IXBisApLjaRnzcQRBMSjChE%253D%26t%3D4d5b0474%26ps%3D13740610%26shp%3D81f88b70%26shcp%3D43f4a2f9%26idc%3Dno1a",
+    "play_url": "/tiktok/proxy?url=https%3A//v16-webapp-prime.tiktok.com/video/tos/maliva/tos-maliva-ve-0068c799-us/osQQ63K8EIEMgPRCtAaiBtBVNmiwRBi1z35Ak/%3Fa%3D1988%26bti%3DODszNWYuMDE6%26%26bt%3D767%26ft%3D-Csk_mmLPD12NiFqFn-UxnJ2hY3W3wv25HcAp%26mime_type%3Dvideo_mp4%26rc%3DOWk4ZTw4OGhnNDg0OWQ2OUBpMzM6dnY5cm14OzMzaTczNEBiNDQvYDAzNTExMDZjNV5fYSMuaS9qMmQ0NmphLS1kMTJzcw%253D%253D%26expire%3D1783625901%26l%3D20260707193802A06B3BF9BF11A4829DA9%26ply_type%3D2%26policy%3D2%26signature%3Dde3ea6c38ef997bea2d01217908109b5%26tk%3Dtt_chain_token%26btag%3De000b8000",
+    "download_url": ""
+  },
+  "image_posts": null,
+  "hashtags": [
+    "geometrydash",
+    "top1",
+    "edit",
+    "slaughterhouse",
+    "fyp"
+  ],
+  "is_ad": false
+}
+  ```
+  ```full_text Proxy
+  if you get a proxy returned (for example fyp)
+  you can add https://api.scrape.rocks at the start and then it'll
+  fil in by itself /tiktok/proxy
+  then it'll work!
+  ```
+</CodeGroup>
