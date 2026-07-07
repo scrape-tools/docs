@@ -3,11 +3,11 @@
   "theme": "mint",
   "name": "scrape.rocks",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#5c0909",
+    "light": "#5c0909",
+    "dark": "#5c0909"
   },
-  "favicon": "/icon.jpg",
+  "favicon": "/icon.png",
   "navigation": {
     "pages": [
       {
@@ -42,15 +42,12 @@
       }
     ]
   },
-  "logo": {
-    "light": "/icon.jpg",
-    "dark": "/icon.jpg"
-  },
+  "logo": "public/icon.png",
   "navbar": {
     "links": [
       {
         "label": "Discord",
-        "href": "https://discord.com/users/@mwpk"
+        "href": "https://discord.com/users/230759433465102336"
       }
     ]
   },
