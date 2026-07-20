@@ -12,24 +12,24 @@ icon: "language"
 
 <CodeGroup>
   ```bash curl
-  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/translate?q=Hola%20mundo&target=en"
+  curl -H "Authorization: Bearer <key>" "https://bridge.scrape.rocks/translate?q=Hola%20mundo&target=en"
   ```
   ```python Python
   import requests
 
   headers = {"Authorization": "Bearer <key>"}
-  r = requests.get("https://api.scrape.rocks/translate?q=Hola%20mundo&target=en", headers=headers)
+  r = requests.get("https://bridge.scrape.rocks/translate?q=Hola%20mundo&target=en", headers=headers)
   print(r.json())
   ```
   ```javascript JavaScript
-  fetch("https://api.scrape.rocks/translate?q=Hola%20mundo&target=en", {
+  fetch("https://bridge.scrape.rocks/translate?q=Hola%20mundo&target=en", {
     headers: { Authorization: "Bearer <key>" }
   })
     .then(r => r.json())
     .then(console.log)
   ```
   ```typescript TypeScript
-  const response = await fetch("https://api.scrape.rocks/translate?q=Hola%20mundo&target=en", {
+  const response = await fetch("https://bridge.scrape.rocks/translate?q=Hola%20mundo&target=en", {
     headers: { Authorization: "Bearer <key>" }
   });
   const data = await response.json();

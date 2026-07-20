@@ -19,24 +19,24 @@ icon: "https://cdn.simpleicons.org/roblox"
 
 <CodeGroup>
   ```bash curl
-  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/roblox/user?username=BuildIntoGames"
+  curl -H "Authorization: Bearer <key>" "https://bridge.scrape.rocks/roblox/user?username=BuildIntoGames"
   ```
   ```python Python
   import requests
 
   headers = {"Authorization": "Bearer <key>"}
-  r = requests.get("https://api.scrape.rocks/roblox/user?username=BuildIntoGames", headers=headers)
+  r = requests.get("https://bridge.scrape.rocks/roblox/user?username=BuildIntoGames", headers=headers)
   print(r.json())
   ```
   ```javascript JavaScript
-  fetch("https://api.scrape.rocks/roblox/user?username=BuildIntoGames", {
+  fetch("https://bridge.scrape.rocks/roblox/user?username=BuildIntoGames", {
     headers: { Authorization: "Bearer <key>" }
   })
     .then(r => r.json())
     .then(console.log)
   ```
   ```typescript TypeScript
-  const response = await fetch("https://api.scrape.rocks/roblox/user?username=BuildIntoGames", {
+  const response = await fetch("https://bridge.scrape.rocks/roblox/user?username=BuildIntoGames", {
     headers: { Authorization: "Bearer <key>" }
   });
   const data = await response.json();

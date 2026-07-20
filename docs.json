@@ -29,7 +29,8 @@
       {
         "group": "Developer",
         "pages": [
-          "developer/github"
+          "developer/github",
+          "developer/screenshot"
         ]
       },
       {

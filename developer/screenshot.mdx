@@ -1,0 +1,47 @@
+---
+title: "Screenshot"
+description: ""
+icon: "camera"
+---
+
+| Method | Endpoint | Parameters |
+|--------|----------|------------|
+| GET | `/screenshot` | `url`, `delay` (default 2.0), `size` (default "1920x1080"), `resolution` (default "high") |
+
+<CodeGroup>
+  ```bash curl
+  curl -H "Authorization: Bearer <key>" "https://bridge.scrape.rocks/screenshot?url=https://example.com"
+  ```
+  ```python Python
+  import requests
+
+  headers = {"Authorization": "Bearer <key>"}
+  r = requests.get("https://bridge.scrape.rocks/screenshot?url=https://example.com", headers=headers)
+  with open("screenshot.jpg", "wb") as f:
+      f.write(r.content)
+  ```
+  ```javascript JavaScript
+  fetch("https://bridge.scrape.rocks/screenshot?url=https://example.com", {
+    headers: { Authorization: "Bearer <key>" }
+  })
+    .then(r => r.blob())
+    .then(blob => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "screenshot.jpg";
+      a.click();
+    })
+  ```
+  ```typescript TypeScript
+  const response = await fetch("https://bridge.scrape.rocks/screenshot?url=https://example.com", {
+    headers: { Authorization: "Bearer <key>" }
+  });
+  const blob = await response.blob();
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "screenshot.jpg";
+  a.click();
+  ```
+</CodeGroup>
+
+<img src="/screenshot.jpg" alt="Screenshot example" />

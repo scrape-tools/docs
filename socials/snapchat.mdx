@@ -14,24 +14,24 @@ icon: "https://cdn.simpleicons.org/snapchat"
 
 <CodeGroup>
   ```bash curl
-  curl -H "Authorization: Bearer <key>" "https://api.scrape.rocks/snapchat/user?username=example"
+  curl -H "Authorization: Bearer <key>" "https://bridge.scrape.rocks/snapchat/user?username=example"
   ```
   ```python Python
   import requests
 
   headers = {"Authorization": "Bearer <key>"}
-  r = requests.get("https://api.scrape.rocks/snapchat/user?username=example", headers=headers)
+  r = requests.get("https://bridge.scrape.rocks/snapchat/user?username=example", headers=headers)
   print(r.json())
   ```
   ```javascript JavaScript
-  fetch("https://api.scrape.rocks/snapchat/user?username=example", {
+  fetch("https://bridge.scrape.rocks/snapchat/user?username=example", {
     headers: { Authorization: "Bearer <key>" }
   })
     .then(r => r.json())
     .then(console.log)
   ```
   ```typescript TypeScript
-  const response = await fetch("https://api.scrape.rocks/snapchat/user?username=example", {
+  const response = await fetch("https://bridge.scrape.rocks/snapchat/user?username=example", {
     headers: { Authorization: "Bearer <key>" }
   });
   const data = await response.json();
